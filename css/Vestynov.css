@@ -1,0 +1,168 @@
+body
+{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0; /*Aca lo que hago es que todo el header se pegue hacia arriba*/
+}
+a
+{
+    text-decoration: none;
+    color: black;
+}
+header
+{
+    display:flex; /*con esto me queda alineado */
+    min-height: 60px; /*Esto es altura min, para que a la hora de reducir no se me salga del recuadro*/
+    background-color: rgb(255, 255, 255);
+    justify-content:space-between ; /*Con esto ubicamos nuestros elemenots en el eje principal con space-between se separa uno del otro, queda uno en una esquina y el otro en la otra esquina*/
+    align-items: center;/*con esto me quedan en el centro los contenidos*/
+    padding: 10px;
+    background-color: rgb(235, 208, 174);
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+}
+.logo img
+{
+    height: 70px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+nav a
+{
+    font-weight: 600; /*Con esto le pusimos negrilla a las opciones*/
+    padding-right: 10px;
+}
+nav a:hover
+{
+    color: blue;
+}
+.icono 
+{
+    height: 40px;
+}
+@media (max-width:700px)
+{
+    header
+    {
+        flex-direction: column;/*Esto es para que los elementos aparezcan uno arriba del otro*/
+    }
+    nav
+    {
+        padding: 10px 0px;
+    }
+    .seccion1
+    {
+        flex-direction: column;
+    }
+}
+.seccion1
+{
+    margin: 50px;
+    padding-top: 150px;
+    display: flex;
+}
+.vestido img
+{
+    width: 450px;
+    height: 450px;
+    padding-left: 50px;
+}
+.detalle
+{
+    width: 500px;
+    height: 500px;
+    float: right;
+    padding-left: 50px;
+}
+.tallas
+{
+    border-radius: 5px;
+}
+.boton-comprar
+{
+    background-color: rgb(0, 0, 0);
+    opacity: 1;
+    transition: 0.3s all;
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 5px;
+}
+.pie-pagina
+{
+    width: 100%;
+    height: 250;
+    background-color: rgb(161, 125, 82);
+}
+.pie-pagina .grupo-1
+{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure
+{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img
+{
+    width: 150px;
+    border-radius: 15px;
+}
+.pie-pagina .grupo-1 .box h2
+{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p
+{
+    color: black;
+    margin-bottom: 10px;
+}
+.red-social img
+{
+    height: 30px;
+    width: 30px;
+}
+.pie-pagina .grupo-1 .red-social a
+{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-2
+{
+    background-color: rgb(235, 208, 174);
+    padding: 15px 10px;
+    text-align: center;
+}
+.pie-pagina .grupo-2 small
+{
+    font-size: 15px;
+}
+@media sreen and (max-width:700px)
+{
+    .pie-pagina .grupo-1
+{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+}
+}
